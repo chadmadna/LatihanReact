@@ -7,16 +7,16 @@ class Hello extends React.Component{
     this.state = {
       text: 'Hello, World!'
     }
-    this.submit = this.submit.bind(this)
   }
 
   render() {
     return (
       <div>
         <h1>{this.state.text}</h1>
+        <p>{this.props.moreText}</p>
       </div>
     )
   }
 }
 
-ReactDOM.render(<Hello />, document.getElementById('app'));
+ReactDOM.render(<Hello moreText="I'm ready to learn React." />, document.getElementById('app'));
